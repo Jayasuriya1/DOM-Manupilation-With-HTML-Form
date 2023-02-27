@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title" class="text-center">DOM Manipulation With Form</h1>
+      <p id="description">
+        After submiting a form all details will placed into table
+      </p>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-10">
+          <form id="form">
+            <div class="form-group">
+              <label for="first-name">First Name</label><br />
+              <input
+                type="text"
+                id="first-name"
+                placeholder="Enter first name"
+                required
+              /><br />
+              <label for="last-name">Last Name</label><br />
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Enter last name"
+                required
+              /><br />
+              <label for="pincode">Pincode</label><br />
+              <input
+                type="number"
+                onKeyPress="if(this.value.length==6) return false;"
+                id="pincode"
+                placeholder="Enter pincode"
+                required
+              />
+              <br />
+              <p>Gender</p>
+              <ul>
+                <li>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    required
+                  /><label for="">Male</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    required
+                  /><label for="">Female</label>
+                </li>
+              </ul>
+
+              <br />
+              <label for="address">Address</label>
+              <textarea
+                id="address"
+                placeholder="Enter address"
+                required
+              ></textarea>
+              <br />
+              <p>Favate Food</p>
+              <ul>
+                <li>
+                  <input type="checkbox" name="food" value="limon rice" /><label
+                    >Limon rice</label
+                  >
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="food"
+                    value="sambar rice"
+                  /><label>Sambar rice</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="food" value="curd rice" /><label
+                    >Curd rice</label
+                  >
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="food"
+                    value="tomato rice"
+                  /><label>Tomato rice</label>
+                </li>
+              </ul>
+
+              <br />
+              <label for="address">State Name</label><br />
+              <input
+                type="text"
+                placeholder="Enter state name"
+                required
+              /><br />
+              <label for="address">Country Name</label><br />
+              <input
+                type="text"
+                placeholder="Enter country name"
+                required
+              /><br /><br />
+              <button type="submit" id="submit" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div>
+          <table
+            class="table table-striped-columns table-hover justify-content-center"
+          >
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>Food</th>
+                <th>State</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody class="tBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</html>
